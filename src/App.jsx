@@ -66,7 +66,7 @@ const App = () => {
               download
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-accent hover:bg-green-600 text-white px-6 py-2 rounded-full font-bold transition-all shadow-lg shadow-accent/25 flex items-center gap-2"
+              className="bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-full font-bold transition-all shadow-lg shadow-primary/25 flex items-center gap-2"
             >
               <FaDownload className="text-sm" /> Download App
             </motion.a>
@@ -124,7 +124,7 @@ const App = () => {
                 download
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-accent/10 hover:bg-accent/20 border border-accent/40 text-accent px-8 py-4 rounded-full font-bold text-lg flex items-center gap-3 backdrop-blur-md transition-all"
+                className="bg-primary/10 hover:bg-primary/20 border border-primary/40 text-primary px-8 py-4 rounded-full font-bold text-lg flex items-center gap-3 backdrop-blur-md transition-all"
               >
                 <FaAndroid className="text-2xl" /> Download APK
               </motion.a>
@@ -364,7 +364,7 @@ const App = () => {
             >
               <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
                 Work on the Go with <br />
-                <span className="text-accent underline decoration-accent/30 decoration-8 underline-offset-4">Our Mobile App</span>
+                <span className="text-primary underline decoration-primary/30 decoration-8 underline-offset-4">Our Mobile App</span>
               </h2>
               <p className="text-xl text-white/60 mb-10 leading-relaxed">
                 Stay connected and manage your business from anywhere. Our Android app provides a full-featured experience optimized for mobile connectivity.
@@ -375,13 +375,13 @@ const App = () => {
                   download
                   whileHover={{ scale: 1.05, y: -5 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-accent hover:bg-green-600 text-white px-10 py-5 rounded-3xl font-black text-xl flex items-center justify-center gap-4 shadow-2xl shadow-accent/30 transition-all"
+                  className="bg-primary hover:bg-primary-dark text-white px-10 py-5 rounded-3xl font-black text-xl flex items-center justify-center gap-4 shadow-2xl shadow-primary/30 transition-all"
                 >
                   <FaAndroid className="text-3xl" /> Direct Download APK
                 </motion.a>
               </div>
               <p className="mt-6 text-white/30 text-sm font-bold flex items-center gap-2">
-                <FaCheckCircle className="text-accent" /> Scan for Viruses: 100% Secure & Verified APK
+                <FaCheckCircle className="text-primary" /> Scan for Viruses: 100% Secure & Verified APK
               </p>
             </motion.div>
             <motion.div

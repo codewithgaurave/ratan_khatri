@@ -1,10 +1,19 @@
 @import "tailwindcss";
 
 @theme {
+  /* Exact Colors from Logo.jpeg */
   --color-primary: #1FA2E1;
+  /* Light Blue Wave */
   --color-primary-dark: #0E5AA7;
+  /* Dark Blue Text/Bottom Wave */
+  --color-primary-deep: #081C2E;
+  /* Background derived from dark brand blue */
+  --color-primary-glow: rgba(31, 162, 225, 0.4);
+
   --color-bg-dark: #081C2E;
   --color-bg-darker: #040d16;
+
+  /* WhatsApp green remains for the specific floating action */
   --color-accent: #25D366;
 
   --font-outfit: "Outfit", sans-serif;
@@ -27,11 +36,15 @@
   }
 
   .glass-card {
-    @apply bg-blue-900/10 backdrop-blur-md border border-primary/20 hover:border-primary/50 transition-all duration-300;
+    @apply bg-primary-dark/5 backdrop-blur-md border border-primary/20 hover:border-primary/50 transition-all duration-300;
   }
 
   .gradient-text {
-    @apply bg-linear-to-r from-white to-primary bg-clip-text text-transparent;
+    @apply bg-linear-to-r from-white via-primary to-primary-dark bg-clip-text text-transparent;
+  }
+
+  .gradient-bg {
+    @apply bg-linear-to-br from-primary to-primary-dark;
   }
 }
 
