@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaWhatsapp, FaArrowRight, FaCog, FaHistory, FaCheckCircle, FaUserShield, FaChevronDown, FaDownload, FaAndroid } from 'react-icons/fa';
+import { FaWhatsapp, FaArrowRight, FaCog, FaHistory, FaCheckCircle, FaUserShield, FaChevronDown, FaDownload, FaAndroid, FaBolt, FaWallet, FaHeadset, FaGift, FaUsers, FaQuestionCircle, FaShieldAlt } from 'react-icons/fa';
 import { RiDashboardLine, RiCustomerService2Fill, RiSecurePaymentLine } from 'react-icons/ri';
 import logo from './assets/logo.jpeg';
 import s1 from './assets/s1.jpeg';
@@ -79,10 +79,10 @@ const App = () => {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               src={logo}
-              alt="RKM Logo"
+              alt="Ratan Khatri Matka Logo"
               className="h-12 w-12 rounded-full border-2 border-primary/30 object-cover shadow-sm"
             />
-            <span className="text-2xl font-black tracking-tighter gradient-text">RKM</span>
+            <span className="text-2xl font-black tracking-tighter gradient-text"></span>
           </div>
 
           <div className="hidden md:flex items-center gap-8">
@@ -93,8 +93,8 @@ const App = () => {
             <a href="#contact" className="text-text-main hover:text-primary transition-colors font-semibold">Contact</a>
 
             <motion.a
-              href="/rkm.apk"
-              download
+              href="/app-release.apk"
+              download="apk"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-full font-bold transition-all shadow-lg shadow-primary/25 flex items-center gap-2"
@@ -124,14 +124,14 @@ const App = () => {
               animate={{ opacity: 1, y: 0 }}
               className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary-dark text-sm font-bold mb-6"
             >
-              WELCOME TO THE FUTURE OF MANAGEMENT
+              WELCOME TO THE WORLD'S BEST MATKA APP
             </motion.span>
             <h1 className="text-6xl md:text-7xl font-black mb-6 leading-[1.1] tracking-tight text-text-main">
-              Manage Your <br />
-              <span className="gradient-text">Business Better</span>
+              Play & Win <br />
+              <span className="gradient-text">Real Money Daily</span>
             </h1>
             <p className="text-xl text-text-muted mb-10 max-w-lg leading-relaxed">
-              Experience the next generation of business management with RKM. Streamline workflows, increase efficiency, and scale your operations with ease.
+              Experience India's most trusted Matka platform. Play Main Matka, Starline, and Gali Dishawar with the best market rates and instant withdrawals.
             </p>
             <div className="flex flex-wrap gap-4">
               <motion.button
@@ -143,8 +143,8 @@ const App = () => {
               </motion.button>
 
               <motion.a
-                href="/rkm.apk"
-                download
+                href="/app-release.apk"
+                download="apk"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-primary/5 hover:bg-primary/10 border border-primary/30 text-primary-dark px-8 py-4 rounded-full font-bold text-lg flex items-center gap-3 backdrop-blur-md transition-all"
@@ -159,7 +159,7 @@ const App = () => {
                   <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-primary/20 flex items-center justify-center text-[10px] uppercase font-bold text-primary-dark">User</div>
                 ))}
               </div>
-              <span>Trusted by 5,000+ businesses worldwide</span>
+              <span>Trusted by 5,00,000+ players across India</span>
             </div>
           </motion.div>
 
@@ -170,26 +170,46 @@ const App = () => {
             className="relative hidden lg:block"
           >
             <div className="absolute inset-0 bg-primary/10 blur-[100px] rounded-full animate-float" />
-            <div className="relative glass-card rounded-3xl p-8 border-primary/10 z-10 animate-float shadow-xl">
-              <div className="space-y-6">
-                <div className="flex justify-between items-center">
-                  <div className="h-4 w-32 bg-primary/10 rounded-full" />
-                  <div className="h-4 w-12 bg-primary/20 rounded-full" />
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="h-24 bg-primary/5 rounded-2xl border border-primary/10 p-4 space-y-3">
-                    <div className="h-3 w-3/4 bg-primary/10 rounded-full" />
-                    <div className="h-6 w-1/2 bg-primary/30 rounded-full" />
+            <div className="relative glass-card rounded-[40px] p-10 border-primary/10 z-10 animate-float shadow-2xl bg-white/10 backdrop-blur-2xl">
+              <div className="flex flex-col items-center text-center space-y-8">
+                {/* Logo in Card */}
+                <div className="relative">
+                  <div className="absolute inset-0 bg-primary/20 blur-[40px] rounded-full animate-pulse" />
+                  <motion.img
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.8 }}
+                    src={logo}
+                    alt="Logo"
+                    className="w-32 h-32 rounded-full border-4 border-primary/30 shadow-2xl relative z-10 object-cover"
+                  />
+                  <div className="absolute -bottom-2 -right-2 bg-green-500 text-white p-2 rounded-full shadow-lg z-20 border-4 border-white">
+                    <FaCheckCircle className="text-xl" />
                   </div>
-                  <div className="h-24 bg-primary/5 rounded-2xl border border-primary/10 p-4 space-y-3">
-                    <div className="h-3 w-3/4 bg-primary/10 rounded-full" />
-                    <div className="h-6 w-1/2 bg-primary/20 rounded-full" />
+                </div>
+
+                <div className="space-y-2">
+                   
+                  <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary-dark text-sm font-bold">
+                    <FaShieldAlt className="text-xs" /> Certified Fair Play
                   </div>
                 </div>
-                <div className="h-40 bg-primary/5 rounded-2xl border border-primary/10" />
-                <div className="flex gap-3">
-                  <div className="h-10 w-full bg-primary rounded-xl" />
-                  <div className="h-10 w-full bg-primary/10 rounded-xl" />
+
+                <div className="w-full grid grid-cols-2 gap-4">
+                  <div className="bg-white/5 border border-white/10 p-4 rounded-3xl text-center">
+                    <p className="text-xs text-text-muted font-bold uppercase tracking-widest mb-1">Live Wins</p>
+                    <p className="text-2xl font-black text-primary-dark">₹12.5L+</p>
+                  </div>
+                  <div className="bg-white/5 border border-white/10 p-4 rounded-3xl text-center">
+                    <p className="text-xs text-text-muted font-bold uppercase tracking-widest mb-1">Active Now</p>
+                    <div className="flex items-center justify-center gap-2 text-2xl font-black text-green-500">
+                      <span className="w-2 h-2 bg-green-500 rounded-full animate-ping" />
+                      14.8K
+                    </div>
+                  </div>
+                </div>
+
+                <div className="w-full h-12 bg-linear-to-r from-primary to-primary-dark rounded-2xl flex items-center justify-center text-white font-black text-lg shadow-lg shadow-primary/30">
+                  <FaBolt className="mr-2" /> Play & Win Now
                 </div>
               </div>
             </div>
@@ -205,27 +225,68 @@ const App = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="bg-bg-darker py-16 border-y border-primary/5">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      {/* Why Choose Us Section */}
+      <section className="py-24 px-6 bg-linear-to-b from-bg-darker to-bg-dark">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-black mb-4 text-text-main">Why <span className="gradient-text">Choose Us?</span></h2>
+            <p className="text-text-muted max-w-xl mx-auto font-medium">India's most loved and trusted Matka platform with premium features.</p>
+          </div>
+          <div className="grid md:grid-cols-4 gap-6">
             {[
-              { label: 'Active Users', value: '10K+' },
-              { label: 'Success Rate', value: '99.9%' },
-              { label: 'Cloud Servers', value: '500+' },
-              { label: 'Countries', value: '45+' }
-            ].map((stat, i) => (
+              { title: "Fastest Results", desc: "Get live results faster than any other app in the market.", icon: <FaBolt className="text-yellow-500" /> },
+              { title: "Instant Payout", desc: "Withdraw your winnings within 15 minutes to your bank account.", icon: <FaWallet className="text-green-500" /> },
+              { title: "Safe & Secure", desc: "100% encrypted transactions and data protection for all users.", icon: <FaShieldAlt className="text-blue-500" /> },
+              { title: "24/7 Support", desc: "Our team is always online to help you with any issues via WhatsApp.", icon: <FaHeadset className="text-primary-dark" /> }
+            ].map((item, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
+                whileHover={{ y: -10 }}
+                className="glass-card p-8 rounded-3xl border border-primary/10 text-center"
               >
-                <h2 className="text-4xl font-black text-primary-dark mb-2">{stat.value}</h2>
-                <p className="text-text-muted text-sm font-bold uppercase tracking-widest">{stat.label}</p>
+                <div className="text-4xl mb-4 flex justify-center">{item.icon}</div>
+                <h4 className="text-xl font-bold text-text-main mb-2">{item.title}</h4>
+                <p className="text-text-muted text-sm">{item.desc}</p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How to Play Section */}
+      <section className="py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="order-2 lg:order-1">
+              <h2 className="text-4xl md:text-5xl font-black mb-8 leading-tight text-text-main">
+                How to Start <br />
+                <span className="gradient-text">Winning in 4 Steps</span>
+              </h2>
+              <div className="space-y-8">
+                {[
+                  { step: "01", title: "Download & Install", desc: "Get the APK from our website and install it on your Android phone." },
+                  { step: "02", title: "Free Registration", desc: "Create your account for free with your mobile number and get ₹5 bonus." },
+                  { step: "03", title: "Add Funds", desc: "Deposit money using UPI or QR code. Get extra bonus on first deposit." },
+                  { step: "04", title: "Play & Win", desc: "Choose your favorite market, place your bid, and withdraw wins instantly." }
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-6">
+                    <div className="flex-shrink-0 w-12 h-12 bg-primary/20 rounded-2xl flex items-center justify-center text-primary-dark font-black text-xl">
+                      {item.step}
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-text-main mb-1">{item.title}</h4>
+                      <p className="text-text-muted">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="order-1 lg:order-2 flex justify-center">
+              <div className="relative">
+                <div className="absolute inset-0 bg-primary/10 blur-[100px] rounded-full" />
+                <img src={screenshots[0]} alt="Step 1" className="w-64 rounded-[3rem] border-8 border-primary/10 shadow-2xl relative z-10" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -240,10 +301,10 @@ const App = () => {
               viewport={{ once: true }}
               className="text-4xl md:text-5xl font-black mb-6 text-text-main"
             >
-              Our Premium <span className="gradient-text">Services</span>
+              Best Market <span className="gradient-text">Game Rates</span>
             </motion.h2>
             <p className="text-text-muted max-w-2xl mx-auto text-lg leading-relaxed font-medium">
-              We provide cutting-edge solutions designed to take your business to new heights with modern technology and seamless integration.
+              We offer the highest returns in the market. Check out our unbeatable game rates for all Matka categories.
             </p>
           </div>
 
@@ -255,12 +316,12 @@ const App = () => {
             className="grid md:grid-cols-3 gap-8"
           >
             {[
-              { icon: <RiDashboardLine />, title: 'Advanced Analytics', desc: 'Real-time monitoring and deep insights into your business performance to make data-driven decisions.' },
-              { icon: <RiSecurePaymentLine />, title: 'Secure Infrastructure', desc: 'Enterprise-grade security standards to keep your data and financial transactions protected at all times.' },
-              { icon: <RiCustomerService2Fill />, title: '24/7 Priority Support', desc: 'Dedicated team of experts available around the clock to ensure your operations run without a hitch.' },
-              { icon: <FaCog />, title: 'Smart Automation', desc: 'Reduce manual tasks by up to 80% with our intelligent workflow automation engine and AI-powered tools.' },
-              { icon: <FaHistory />, title: 'Legacy Migration', desc: 'Seamlessly transition from your existing systems to our modern platform with zero downtime and data loss.' },
-              { icon: <FaUserShield />, title: 'Identity Management', desc: 'Sophisticated user permissions and role-based access control to maintain total control over your workspace.' }
+              { icon: <RiDashboardLine />, title: 'Single Digit', desc: 'Get 10 ka 100 — The best returns for single digit play in the industry.' },
+              { icon: <RiSecurePaymentLine />, title: 'Jodi Digit', desc: 'Win Big! 10 ka 1000 for Jodi. Highest winning price guaranteed.' },
+              { icon: <RiCustomerService2Fill />, title: 'Single Pana', desc: 'Earn 10 ka 1600 on Single Pana. Play with confidence on RKM.' },
+              { icon: <FaCog />, title: 'Double Pana', desc: 'Secure 10 ka 3200 for Double Pana. Real profits for real players.' },
+              { icon: <FaHistory />, title: 'Triple Pana', desc: 'Unbeatable! 10 ka 7000 for Triple Pana. Fast results and payouts.' },
+              { icon: <FaUserShield />, title: 'Full Sangam', desc: 'The Jackpot! 10 ka 1,00,000. Try your luck with the biggest prize.' }
             ].map((service, i) => (
               <motion.div
                 key={i}
@@ -271,6 +332,7 @@ const App = () => {
                   {service.icon}
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-text-main">{service.title}</h3>
+                <div className="text-primary-dark font-black text-xl mb-2">Rate: {service.desc.split(' — ')[0] || service.desc.split(' for ')[0]}</div>
                 <p className="text-text-muted leading-relaxed font-medium">
                   {service.desc}
                 </p>
@@ -298,10 +360,10 @@ const App = () => {
             </p>
             <div className="space-y-4 mb-10">
               {[
-                "Innovation-First Approach",
-                "Customer-Centric Design",
-                "Scalable Architecture",
-                "Enterprise-Grade Reliability"
+                "Instant Withdrawals (7 AM - 10 PM)",
+                "Minimum Withdrawal: ₹1000",
+                "24/7 Customer Support (Call/WhatsApp)",
+                "Secure & Fair Play Environment"
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3 font-bold text-text-main">
                   <FaCheckCircle className="text-primary-dark" />
@@ -384,8 +446,8 @@ const App = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-6">
                 <motion.a
-                  href="/rkm.apk"
-                  download
+                  href="/app-release.apk"
+                  download="apk"
                   whileHover={{ scale: 1.05, y: -5 }}
                   whileTap={{ scale: 0.95 }}
                   className="bg-primary hover:bg-primary-dark text-white px-10 py-5 rounded-3xl font-black text-xl flex items-center justify-center gap-4 shadow-2xl shadow-primary/30 transition-all"
@@ -428,6 +490,139 @@ const App = () => {
                 </div>
               </motion.div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Market Timings Section */}
+      <section className="py-24 px-6 bg-bg-darker">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-black mb-4 text-text-main">Popular <span className="gradient-text">Market Timings</span></h2>
+            <p className="text-text-muted max-w-xl mx-auto font-medium">Never miss a bid. Our markets run throughout the day with live results.</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="glass-card p-8 rounded-3xl border border-primary/10 hover:border-primary/30 transition-all">
+              <h3 className="text-2xl font-black text-primary-dark mb-6 flex items-center gap-3">
+                Gali Dishawar
+              </h3>
+              <ul className="space-y-4 font-bold text-text-main">
+                <li className="flex justify-between border-b border-primary/5 pb-2"><span>Desawar:</span> <span className="text-primary-dark">03:00 AM</span></li>
+                <li className="flex justify-between border-b border-primary/5 pb-2"><span>Faridabad:</span> <span className="text-primary-dark">05:40 PM</span></li>
+                <li className="flex justify-between border-b border-primary/5 pb-2"><span>Gaziyabad:</span> <span className="text-primary-dark">08:30 PM</span></li>
+                <li className="flex justify-between border-b border-primary/5 pb-2"><span>Gali:</span> <span className="text-primary-dark">11:00 PM</span></li>
+              </ul>
+            </div>
+            <div className="glass-card p-8 rounded-3xl border border-primary/10 hover:border-primary/30 transition-all">
+              <h3 className="text-2xl font-black text-primary-dark mb-6 flex items-center gap-3">
+                Starline Markets
+              </h3>
+              <ul className="space-y-3 font-bold text-text-main text-sm">
+                <li className="flex justify-between border-b border-primary/5 pb-1"><span>12:00 PM:</span> <span className="text-primary-info">Live Now</span></li>
+                <li className="flex justify-between border-b border-primary/5 pb-1"><span>02:00 PM:</span> <span className="text-primary-info">Open</span></li>
+                <li className="flex justify-between border-b border-primary/5 pb-1"><span>04:00 PM:</span> <span className="text-primary-info">Open</span></li>
+                <li className="flex justify-between border-b border-primary/5 pb-1"><span>06:00 PM:</span> <span className="text-primary-info">Open</span></li>
+                <li className="flex justify-between border-b border-primary/5 pb-1"><span>08:00 PM:</span> <span className="text-primary-info">Open</span></li>
+              </ul>
+            </div>
+            <div className="glass-card p-8 rounded-3xl border border-primary/10 hover:border-primary/30 transition-all">
+              <h3 className="text-2xl font-black text-primary-dark mb-6 flex items-center gap-3">
+                Main Markets
+              </h3>
+              <ul className="space-y-4 font-bold text-text-main">
+                <li className="flex justify-between border-b border-primary/5 pb-2"><span>Kalyan:</span> <span className="text-primary-dark">04:00 PM</span></li>
+                <li className="flex justify-between border-b border-primary/5 pb-2"><span>Milan Day:</span> <span className="text-primary-dark">03:00 PM</span></li>
+                <li className="flex justify-between border-b border-primary/5 pb-2"><span>Madhuri:</span> <span className="text-primary-dark">01:00 PM</span></li>
+                <li className="flex justify-between border-b border-primary/5 pb-2"><span>Supreme:</span> <span className="text-primary-dark">12:00 PM</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Rules & Bonus Section */}
+      <section className="py-24 px-6">
+        <div className="max-w-7xl mx-auto glass-card rounded-[40px] p-12 border border-primary/10 overflow-hidden relative">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 blur-[80px] rounded-full -translate-y-1/2 translate-x-1/2" />
+          <div className="grid md:grid-cols-2 gap-12 relative z-10">
+            <div>
+              <h3 className="text-3xl font-black text-text-main mb-6 underline decoration-primary/20 decoration-4">Withdrawal & Deposit Rules</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <span className="text-primary-dark mt-1">✓</span>
+                  <p className="font-bold text-text-main">Min Deposit ₹200 / Max Deposit Unlimited</p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-primary-dark mt-1">✓</span>
+                  <p className="font-bold text-text-main">Automatic Withdrawal Time: 7:00 AM to 10:00 PM</p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-primary-dark mt-1">✓</span>
+                  <p className="font-bold text-text-main">Minimum Withdrawal: ₹1000</p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-primary-dark mt-1">✓</span>
+                  <p className="font-bold text-text-main">Points will be added within 10-15 mins of request.</p>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-3xl font-black text-text-main mb-6 underline decoration-primary/20 decoration-4">Special Offers & Bonus</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-4 p-4 bg-primary/5 rounded-2xl border border-primary/10">
+                  <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-2xl text-primary-dark">
+                    <FaGift />
+                  </div>
+                  <div>
+                    <h5 className="font-black text-primary-dark">5% Deposit Bonus</h5>
+                    <p className="text-sm font-medium text-text-muted">On all deposits above ₹5000</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-4 p-4 bg-primary/5 rounded-2xl border border-primary/10">
+                  <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-2xl text-primary-dark">
+                    <FaGift />
+                  </div>
+                  <div>
+                    <h5 className="font-black text-primary-dark">10% Deposit Bonus</h5>
+                    <p className="text-sm font-medium text-text-muted">On all deposits above ₹10,000</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-4 p-4 bg-primary/10 rounded-2xl border border-primary/20">
+                  <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-2xl text-primary-dark">
+                    <FaUsers />
+                  </div>
+                  <div>
+                    <h5 className="font-black text-primary-dark">Refer & Earn ₹100</h5>
+                    <p className="text-sm font-medium text-text-muted">Invite friends and get ₹100 for each referral who joins and deposits.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-24 px-6 bg-bg-darker/30">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-black text-text-main mb-4">Frequently Asked <span className="gradient-text">Questions</span></h2>
+            <p className="text-text-muted font-medium">Everything you need to know about the RKM app.</p>
+          </div>
+          <div className="space-y-4">
+            {[
+              { q: "Is Ratan Khatri Matka safe to play?", a: "Yes, our app is 100% secure and vetted for fair play. We have over 500,000 trusted users." },
+              { q: "How long does a withdrawal take?", a: "Withdrawals are processed during our active hours (7 AM - 10 PM) and typically hit your bank within 15-20 minutes." },
+              { q: "What is the minimum amount I can add?", a: "You can start playing by adding as little as ₹200 to your wallet." },
+              { q: "Do I get points for referring friends?", a: "Yes! You get ₹100 in your wallet for every friend who registers using your referral and completes a deposit." }
+            ].map((faq, i) => (
+              <div key={i} className="glass-card p-6 rounded-2xl border border-primary/5">
+                <h4 className="text-lg font-black text-text-main mb-2 flex items-center gap-3">
+                  <FaQuestionCircle className="text-primary-dark" /> {faq.q}
+                </h4>
+                <p className="text-text-muted font-medium">A: {faq.a}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -483,7 +678,7 @@ const App = () => {
               Your Management?
             </h2>
             <p className="text-xl text-text-muted mb-12 max-w-2xl mx-auto leading-relaxed font-semibold">
-              Don't wait for your competition to overtake you. Join thousands of successful entrepreneurs using RKM to dominate their markets.
+              Get ₹5 Welcome Bonus on Signup. Also get 5% bonus on deposits above ₹5000 and 10% bonus above ₹10,000. Start winning with Ratan Khatri Matka today!
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -502,7 +697,7 @@ const App = () => {
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center gap-3 mb-6">
               <img src={logo} alt="Logo" className="h-10 w-10 rounded-full object-cover shadow-sm" />
-              <span className="text-xl font-black tracking-tighter gradient-text">RKM</span>
+              <span className="text-xl font-black tracking-tighter gradient-text">Ratan Khatri Matka</span>
             </div>
             <p className="text-text-muted font-bold leading-relaxed">
               Building the next generation of business management software. Simple, powerful, and secure.
@@ -530,12 +725,12 @@ const App = () => {
           </div>
 
           <div>
-            <h4 className="font-black mb-6 text-text-main uppercase tracking-widest text-sm">Resources</h4>
+            <h4 className="font-black mb-6 text-text-main uppercase tracking-widest text-sm">Contact Support</h4>
             <ul className="space-y-4 text-text-muted font-bold">
-              <li><a href="#" className="hover:text-primary transition-colors">Documentation</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Tutorials</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Support</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Status</a></li>
+              <li><a href="tel:7073767733" className="hover:text-primary transition-colors">Call: +91-7073767733</a></li>
+              <li><a href="https://wa.me/7073767733" className="hover:text-primary transition-colors">WhatsApp Support</a></li>
+              <li><a href="mailto:support@Ratankhatrimatka.site" className="hover:text-primary transition-colors">support@Ratankhatrimatka.site</a></li>
+              <li><span className="text-xs opacity-70">Anytime Matka PVT LTD</span></li>
             </ul>
           </div>
         </div>
@@ -550,13 +745,13 @@ const App = () => {
 
       {/* Floating WhatsApp */}
       <motion.a
-        href="https://wa.me/your-number"
+        href="https://wa.me/7073767733"
         target="_blank"
         rel="noopener noreferrer"
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         whileHover={{ scale: 1.1, rotate: 10 }}
-        className="fixed bottom-8 right-8 w-16 h-16 bg-accent rounded-full flex items-center justify-center text-3xl shadow-2xl shadow-accent/40 z-50 text-white"
+        className="fixed bottom-26 right-8 w-16 h-16 bg-accent rounded-full flex items-center justify-center text-3xl shadow-2xl shadow-accent/40 z-50 text-white"
       >
         <FaWhatsapp />
         <div className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full border-2 border-white animate-ping" />
