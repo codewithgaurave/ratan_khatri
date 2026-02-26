@@ -68,7 +68,9 @@ const App = () => {
       {/* Background Blobs */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
         <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full animate-pulse" />
-        <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-primary-dark/10 blur-[120px] rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
+        <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-primary-dark/10 blur-[120px] rounded-full animate-pulse" style={{
+          animationDelay: '2s'
+        }} />
       </div>
 
       {/* Navigation */}
@@ -112,8 +114,8 @@ const App = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6 overflow-hidden min-h-[90vh] flex items-center">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+      <section className="relative pt-48 pb-20 px-6 overflow-hidden min-h-[90vh] flex items-center">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -126,102 +128,148 @@ const App = () => {
             >
               WELCOME TO THE WORLD'S BEST MATKA APP
             </motion.span>
-            <h1 className="text-6xl md:text-7xl font-black mb-6 leading-[1.1] tracking-tight text-text-main">
+            <h1 className="text-6xl md:text-8xl font-black mb-6 leading-[1.1] tracking-tight text-text-main">
               Play & Win <br />
               <span className="gradient-text">Real Money Daily</span>
             </h1>
-            <p className="text-xl text-text-muted mb-10 max-w-lg leading-relaxed">
+            <p className="text-xl text-text-muted mb-10 max-w-lg leading-relaxed font-semibold uppercase">
               Experience India's most trusted Matka platform. Play Main Matka, Starline, and Gali Dishawar with the best market rates and instant withdrawals.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <motion.button
-                whileHover={{ scale: 1.05, x: 5 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-full font-bold text-lg flex items-center gap-3 transition-all shadow-xl shadow-primary/20"
-              >
-                Join Now <FaArrowRight />
-              </motion.button>
 
+            <div className="flex flex-wrap gap-6 mb-12">
               <motion.a
-                href="/app-release.apk"
-                download="apk"
+                href="https://247mapp.site/khatri/apk/ratankhatri.apk"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-primary/5 hover:bg-primary/10 border border-primary/30 text-primary-dark px-8 py-4 rounded-full font-bold text-lg flex items-center gap-3 backdrop-blur-md transition-all"
+                className="bg-primary hover:bg-primary-dark text-white px-10 py-5 rounded-2xl font-black text-xl flex items-center justify-center gap-3 shadow-2xl shadow-primary/20 transition-all"
               >
-                <FaAndroid className="text-2xl" /> Download APK
+                <FaDownload /> DOWNLOAD APP
               </motion.a>
+
+              <div className="flex flex-col gap-3">
+                <a href="tel:7073767733" className="flex items-center gap-3 text-red-500 font-bold hover:scale-105 transition-transform">
+                  <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-xl">
+                    <FaHeadset />
+                  </div>
+                  <span>CALL US AT: +91-7073767733</span>
+                </a>
+                <a href="https://wa.me/7073767733" className="flex items-center gap-3 text-green-500 font-bold hover:scale-105 transition-transform">
+                  <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-xl">
+                    <FaWhatsapp />
+                  </div>
+                  <span>WHATSAPP SUPPORT</span>
+                </a>
+              </div>
             </div>
 
-            <div className="mt-12 flex items-center gap-4 text-text-muted font-medium">
+            <div className="flex items-center gap-4 text-text-muted font-bold">
               <div className="flex -space-x-3">
                 {[1, 2, 3, 4].map(i => (
-                  <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-primary/20 flex items-center justify-center text-[10px] uppercase font-bold text-primary-dark">User</div>
+                  <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-primary/20 flex items-center justify-center text-[10px] uppercase font-black text-primary">USER</div>
                 ))}
               </div>
-              <span>Trusted by 5,00,000+ players across India</span>
+              <span className="text-sm">Trusted by 1,00,000+ Players Worldwide</span>
             </div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 0.8, x: 50 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 1 }}
-            className="relative hidden lg:block"
+            className="relative flex justify-center lg:justify-end lg:-mt-[650px]"
           >
-            <div className="absolute inset-0 bg-primary/10 blur-[100px] rounded-full animate-float" />
-            <div className="relative glass-card rounded-[40px] p-10 border-primary/10 z-10 animate-float shadow-2xl bg-white/10 backdrop-blur-2xl">
-              <div className="flex flex-col items-center text-center space-y-8">
-                {/* Logo in Card */}
-                <div className="relative">
-                  <div className="absolute inset-0 bg-primary/20 blur-[40px] rounded-full animate-pulse" />
-                  <motion.img
-                    whileHover={{ rotate: 360 }}
-                    transition={{ duration: 0.8 }}
-                    src={logo}
-                    alt="Logo"
-                    className="w-32 h-32 rounded-full border-4 border-primary/30 shadow-2xl relative z-10 object-cover"
-                  />
-                  <div className="absolute -bottom-2 -right-2 bg-green-500 text-white p-2 rounded-full shadow-lg z-20 border-4 border-white">
-                    <FaCheckCircle className="text-xl" />
+            {/* Animated Glow Background */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/20 blur-[120px] rounded-full animate-pulse" />
+
+            <div className="relative z-10">
+              <motion.div
+                animate={{
+                  y: [0, -20, 0],
+                  rotate: [0, 5, 0]
+                }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                className="relative"
+              >
+                <img
+                  src={logo}
+                  alt="Ratan Khatri Logo"
+                  className="w-72 h-72 md:w-[450px] md:h-[450px] rounded-full object-cover border-[16px] border-white/50 shadow-2xl backdrop-blur-sm"
+                />
+
+                {/* Floating Badge */}
+                <motion.div
+                  animate={{ scale: [1, 1.1, 1] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                  className="absolute -top-4 -right-4 bg-green-500 text-white p-4 rounded-full shadow-xl border-4 border-white"
+                >
+                  <FaCheckCircle className="text-3xl" />
+                </motion.div>
+
+                {/* Secure Badge */}
+                <div className="absolute -bottom-6 -left-6 glass p-4 rounded-2xl border border-primary/20 shadow-xl flex items-center gap-3">
+                  <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center text-primary">
+                    <FaShieldAlt />
+                  </div>
+                  <div className="text-left">
+                    <p className="text-[10px] font-black text-text-muted uppercase tracking-tighter">Verified App</p>
+                    <p className="text-xs font-bold text-text-main">100% SECURE</p>
                   </div>
                 </div>
+              </motion.div>
 
-                <div className="space-y-2">
-                   
-                  <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary-dark text-sm font-bold">
-                    <FaShieldAlt className="text-xs" /> Certified Fair Play
-                  </div>
-                </div>
-
-                <div className="w-full grid grid-cols-2 gap-4">
-                  <div className="bg-white/5 border border-white/10 p-4 rounded-3xl text-center">
-                    <p className="text-xs text-text-muted font-bold uppercase tracking-widest mb-1">Live Wins</p>
-                    <p className="text-2xl font-black text-primary-dark">₹12.5L+</p>
-                  </div>
-                  <div className="bg-white/5 border border-white/10 p-4 rounded-3xl text-center">
-                    <p className="text-xs text-text-muted font-bold uppercase tracking-widest mb-1">Active Now</p>
-                    <div className="flex items-center justify-center gap-2 text-2xl font-black text-green-500">
-                      <span className="w-2 h-2 bg-green-500 rounded-full animate-ping" />
-                      14.8K
-                    </div>
-                  </div>
-                </div>
-
-                <div className="w-full h-12 bg-linear-to-r from-primary to-primary-dark rounded-2xl flex items-center justify-center text-white font-black text-lg shadow-lg shadow-primary/30">
-                  <FaBolt className="mr-2" /> Play & Win Now
-                </div>
-              </div>
-            </div>
-
-            {/* Decor Elements */}
-            <div className="absolute -top-10 -right-10 w-24 h-24 glass rounded-2xl flex items-center justify-center text-primary-dark text-3xl shadow-xl animate-bounce">
-              <FaCheckCircle />
-            </div>
-            <div className="absolute top-1/2 -left-12 w-20 h-20 glass rounded-full flex items-center justify-center text-primary-dark text-2xl shadow-xl" style={{ animation: 'float 4s infinite alternate' }}>
-              <FaUserShield />
+              {/* Decorative Blobs */}
+              <div className="absolute top-0 -left-10 w-24 h-24 bg-primary/10 blur-3xl rounded-full" />
+              <div className="absolute bottom-0 -right-10 w-32 h-32 bg-primary/20 blur-3xl rounded-full" />
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-12 px-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+          {[
+            { label: "Markets", value: "20+", icon: <RiDashboardLine /> },
+            { label: "Support", value: "24/7", icon: <FaHeadset /> },
+            { label: "Players", value: "100K+", icon: <FaUsers /> },
+            { label: "Withdrawal", value: "Instant", icon: <FaBolt /> }
+          ].map((stat, i) => (
+            <div key={i} className="glass-card p-6 rounded-3xl text-center">
+              <div className="text-3xl text-primary mb-2 flex justify-center">{stat.icon}</div>
+              <div className="text-3xl font-black text-text-main">{stat.value}</div>
+              <div className="text-xs font-bold uppercase tracking-widest text-text-muted">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Daily Winners Section */}
+      <section className="py-24 px-6 bg-linear-to-b from-bg-darker to-bg-dark">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-black mb-4 text-text-main">Daily <span className="gradient-text">Winners</span></h2>
+            <p className="text-text-muted max-w-xl mx-auto font-medium">Join our community of winners and start your success story today</p>
+          </div>
+          <div className="grid md:grid-cols-4 gap-6">
+            {[
+              { name: "Bhanwar Lal", amount: "₹13,231" },
+              { name: "Raghunath Singh", amount: "₹8,566" },
+              { name: "Gopal Singh", amount: "₹13,396" },
+              { name: "Mool Chand", amount: "₹3,930" }
+            ].map((winner, i) => (
+              <div key={i} className="glass-card p-8 rounded-3xl text-center hover:scale-105 transition-transform">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary text-2xl mx-auto mb-6">
+                  <FaUsers />
+                </div>
+                <h4 className="text-lg font-bold text-text-main mb-1 uppercase tracking-tight">{winner.name}</h4>
+                <div className="text-2xl font-black text-primary">{winner.amount}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -229,24 +277,24 @@ const App = () => {
       <section className="py-24 px-6 bg-linear-to-b from-bg-darker to-bg-dark">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-black mb-4 text-text-main">Why <span className="gradient-text">Choose Us?</span></h2>
-            <p className="text-text-muted max-w-xl mx-auto font-medium">India's most loved and trusted Matka platform with premium features.</p>
+            <h2 className="text-4xl font-black mb-4 text-text-main uppercase">Why <span className="gradient-text">Choose Us</span></h2>
+            <p className="text-text-muted max-w-xl mx-auto font-bold uppercase tracking-widest text-sm">Experience the gold standard of Matka gaming</p>
           </div>
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { title: "Fastest Results", desc: "Get live results faster than any other app in the market.", icon: <FaBolt className="text-yellow-500" /> },
-              { title: "Instant Payout", desc: "Withdraw your winnings within 15 minutes to your bank account.", icon: <FaWallet className="text-green-500" /> },
-              { title: "Safe & Secure", desc: "100% encrypted transactions and data protection for all users.", icon: <FaShieldAlt className="text-blue-500" /> },
-              { title: "24/7 Support", desc: "Our team is always online to help you with any issues via WhatsApp.", icon: <FaHeadset className="text-primary-dark" /> }
+              { title: "Fast Withdrawal", desc: "Get your winnings quickly with our seamless withdrawal process.", icon: <FaBolt className="text-yellow-500" /> },
+              { title: "20+ Markets", desc: "Explore a wide variety of markets to place your bets.", icon: <RiDashboardLine className="text-primary" /> },
+              { title: "Secure Platform", desc: "Play with confidence on our secure and reliable platform.", icon: <FaShieldAlt className="text-blue-500" /> },
+              { title: "24/7 Support", desc: "Our team is here to assist you anytime, anywhere.", icon: <FaHeadset className="text-primary" /> }
             ].map((item, i) => (
               <motion.div
                 key={i}
                 whileHover={{ y: -10 }}
-                className="glass-card p-8 rounded-3xl border border-primary/10 text-center"
+                className="glass-card p-8 rounded-3xl text-center"
               >
-                <div className="text-4xl mb-4 flex justify-center">{item.icon}</div>
-                <h4 className="text-xl font-bold text-text-main mb-2">{item.title}</h4>
-                <p className="text-text-muted text-sm">{item.desc}</p>
+                <div className="text-4xl mb-6 flex justify-center">{item.icon}</div>
+                <h4 className="text-xl font-bold text-text-main mb-4 uppercase tracking-tight">{item.title}</h4>
+                <p className="text-text-muted font-medium leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -254,91 +302,106 @@ const App = () => {
       </section>
 
       {/* How to Play Section */}
-      <section className="py-24 px-6">
+      <section className="py-24 px-6 bg-linear-to-b from-bg-dark to-bg-darker">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="order-2 lg:order-1">
-              <h2 className="text-4xl md:text-5xl font-black mb-8 leading-tight text-text-main">
-                How to Start <br />
-                <span className="gradient-text">Winning in 4 Steps</span>
-              </h2>
-              <div className="space-y-8">
-                {[
-                  { step: "01", title: "Download & Install", desc: "Get the APK from our website and install it on your Android phone." },
-                  { step: "02", title: "Free Registration", desc: "Create your account for free with your mobile number and get ₹5 bonus." },
-                  { step: "03", title: "Add Funds", desc: "Deposit money using UPI or QR code. Get extra bonus on first deposit." },
-                  { step: "04", title: "Play & Win", desc: "Choose your favorite market, place your bid, and withdraw wins instantly." }
-                ].map((item, i) => (
-                  <div key={i} className="flex gap-6">
-                    <div className="flex-shrink-0 w-12 h-12 bg-primary/20 rounded-2xl flex items-center justify-center text-primary-dark font-black text-xl">
-                      {item.step}
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-bold text-text-main mb-1">{item.title}</h4>
-                      <p className="text-text-muted">{item.desc}</p>
-                    </div>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-black mb-4 text-text-main uppercase">How To <span className="gradient-text">Play</span></h2>
+            <p className="text-text-muted max-w-xl mx-auto font-bold uppercase tracking-widest text-sm">Start your premium gaming journey in 3 simple steps</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-12">
+            {[
+              { step: "01", title: "Download App", desc: "Download our premium app from the website.", icon: <FaDownload /> },
+              { step: "02", title: "Create Account", desc: "Register with your details securely.", icon: <FaUserShield /> },
+              { step: "03", title: "Start Playing", desc: "Choose your game and start winning.", icon: <FaBolt /> }
+            ].map((item, i) => (
+              <div key={i} className="relative group text-center">
+                <div className="text-8xl font-black text-primary/5 absolute -top-10 left-1/2 -translate-x-1/2 group-hover:text-primary/10 transition-colors">
+                  {item.step}
+                </div>
+                <div className="relative z-10">
+                  <div className="w-20 h-20 bg-primary/10 border-2 border-primary/20 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:bg-primary group-hover:text-white transition-all text-primary text-2xl">
+                    {item.icon}
                   </div>
-                ))}
+                  <h4 className="text-2xl font-black text-text-main mb-4 uppercase">{item.title}</h4>
+                  <p className="text-text-muted font-medium leading-relaxed">{item.desc}</p>
+                </div>
               </div>
-            </div>
-            <div className="order-1 lg:order-2 flex justify-center">
-              <div className="relative">
-                <div className="absolute inset-0 bg-primary/10 blur-[100px] rounded-full" />
-                <img src={screenshots[0]} alt="Step 1" className="w-64 rounded-[3rem] border-8 border-primary/10 shadow-2xl relative z-10" />
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-24 px-6 relative">
+      {/* Game Rates Section */}
+      <section id="services" className="py-24 px-6 bg-linear-to-b from-bg-dark to-bg-darker">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-black mb-6 text-text-main"
-            >
-              Best Market <span className="gradient-text">Game Rates</span>
-            </motion.h2>
-            <p className="text-text-muted max-w-2xl mx-auto text-lg leading-relaxed font-medium">
-              We offer the highest returns in the market. Check out our unbeatable game rates for all Matka categories.
-            </p>
+            <h2 className="text-4xl md:text-5xl font-black mb-4 text-text-main uppercase">Game <span className="gradient-text">Rates</span></h2>
+            <p className="text-text-muted max-w-xl mx-auto font-bold uppercase tracking-widest text-sm">Best return rates in the market</p>
           </div>
-
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid md:grid-cols-3 gap-8"
-          >
+          <div className="grid md:grid-cols-3 gap-8">
             {[
-              { icon: <RiDashboardLine />, title: 'Single Digit', desc: 'Get 10 ka 100 — The best returns for single digit play in the industry.' },
-              { icon: <RiSecurePaymentLine />, title: 'Jodi Digit', desc: 'Win Big! 10 ka 1000 for Jodi. Highest winning price guaranteed.' },
-              { icon: <RiCustomerService2Fill />, title: 'Single Pana', desc: 'Earn 10 ka 1600 on Single Pana. Play with confidence on RKM.' },
-              { icon: <FaCog />, title: 'Double Pana', desc: 'Secure 10 ka 3200 for Double Pana. Real profits for real players.' },
-              { icon: <FaHistory />, title: 'Triple Pana', desc: 'Unbeatable! 10 ka 7000 for Triple Pana. Fast results and payouts.' },
-              { icon: <FaUserShield />, title: 'Full Sangam', desc: 'The Jackpot! 10 ka 1,00,000. Try your luck with the biggest prize.' }
-            ].map((service, i) => (
-              <motion.div
-                key={i}
-                variants={itemVariants}
-                className="group glass-card p-10 rounded-3xl"
-              >
-                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-3xl text-primary-dark mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm">
-                  {service.icon}
+              { title: "Single Digit", rate: "10 KA 100", icon: <RiDashboardLine /> },
+              { title: "Jodi Digit", rate: "10 KA 1000", icon: <RiSecurePaymentLine /> },
+              { title: "Single Pana", rate: "10 KA 1600", icon: <RiCustomerService2Fill /> },
+              { title: "Double Pana", rate: "10 KA 3200", icon: <FaCog /> },
+              { title: "Triple Pana", rate: "10 KA 7000", icon: <FaHistory /> },
+              { title: "Full Sangam", rate: "10 KA 1,00,000", icon: <FaUserShield /> }
+            ].map((rate, i) => (
+              <div key={i} className="glass-card p-10 rounded-3xl text-center hover:bg-primary/5 transition-colors border border-primary/5">
+                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-3xl text-primary mx-auto mb-6">
+                  {rate.icon}
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-text-main">{service.title}</h3>
-                <div className="text-primary-dark font-black text-xl mb-2">Rate: {service.desc.split(' — ')[0] || service.desc.split(' for ')[0]}</div>
-                <p className="text-text-muted leading-relaxed font-medium">
-                  {service.desc}
-                </p>
-              </motion.div>
+                <h4 className="text-2xl font-black text-text-main mb-2 uppercase">{rate.title}</h4>
+                <div className="text-3xl font-black text-primary drop-shadow-sm">{rate.rate}</div>
+              </div>
             ))}
-          </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Available Games Section */}
+      <section className="py-24 px-6 bg-linear-to-b from-bg-darker to-bg-dark">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-black mb-4 text-text-main uppercase">Available <span className="gradient-text">Games</span></h2>
+            <p className="text-text-muted max-w-xl mx-auto font-bold uppercase tracking-widest text-sm">Live Results & Market Analysis</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { name: "MILAN MORNING", result: "237-25-366", color: "bg-orange-500" },
+              { name: "SRIDEVI", result: "258-58-170", color: "bg-red-500" },
+              { name: "KALYAN MORNING", result: "579-15-456", color: "bg-blue-600" },
+              { name: "KARNATAKA DAY", result: "359-71-489", color: "bg-green-600" },
+              { name: "TIME BAZAR", result: "259-67-467", color: "bg-purple-600" },
+              { name: "MILAN DAY", result: "259-69-478", color: "bg-pink-600" },
+              { name: "KALYAN", result: "146-17-223", color: "bg-yellow-600" },
+              { name: "SRIDEVI NIGHT", result: "167-43-346", color: "bg-indigo-600" },
+              { name: "MILAN NIGHT", result: "479-02-200", color: "bg-teal-600" },
+              { name: "RAJDHANI NIGHT", result: "168-5*-***", color: "bg-cyan-600" },
+              { name: "MAIN BAZAR", result: "150-6*-***", color: "bg-emerald-600" },
+              { name: "KALYAN NIGHT", result: "779-3*-***", color: "bg-rose-600" },
+              { name: "MADHUR MORNING", result: "236-12-156", color: "bg-violet-600" },
+              { name: "MADHUR DAY", result: "330-64-167", color: "bg-amber-600" },
+              { name: "MADHUR NIGHT", result: "390-20-145", color: "bg-lime-600" },
+              { name: "SUPREME DAY", result: "340-72-345", color: "bg-sky-600" },
+              { name: "SUPREME NIGHT", result: "188-74-149", color: "bg-fuchsia-600" },
+              { name: "RAJDHANI DAY", result: "560-10-280", color: "bg-red-700" }
+            ].map((game, i) => (
+              <div key={i} className="glass-card overflow-hidden rounded-3xl border border-primary/5 hover:border-primary/20 transition-all flex flex-col">
+                <div className={`${game.color} p-4 text-center text-white font-black uppercase tracking-widest`}>
+                  {game.name}
+                </div>
+                <div className="p-8 text-center flex-grow flex flex-col justify-center">
+                  <div className="text-3xl font-black text-text-main mb-6 tracking-tighter">
+                    {game.result}
+                  </div>
+                  <button className="w-full py-3 rounded-xl border-2 border-primary/10 text-primary font-black hover:bg-primary/5 transition-all text-sm uppercase tracking-widest px-8">
+                    View Chart
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
