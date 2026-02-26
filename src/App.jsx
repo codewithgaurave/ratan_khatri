@@ -114,8 +114,8 @@ const App = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-48 pb-20 px-6 overflow-hidden min-h-[90vh] flex items-center">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      <section className="relative pt-64 pb-32 -mt-30 px-6 overflow-hidden min-h-[120vh] flex items-center">
+        <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -128,36 +128,42 @@ const App = () => {
             >
               WELCOME TO THE WORLD'S BEST MATKA APP
             </motion.span>
-            <h1 className="text-6xl md:text-8xl font-black mb-6 leading-[1.1] tracking-tight text-text-main">
+            <h1 className="text-6xl md:text-7xl font-black mb-8 leading-[1.1] tracking-tight text-text-main">
               Play & Win <br />
               <span className="gradient-text">Real Money Daily</span>
             </h1>
-            <p className="text-xl text-text-muted mb-10 max-w-lg leading-relaxed font-semibold uppercase">
+            <p className="text-xl text-text-muted mb-12 max-w-lg leading-relaxed font-semibold uppercase">
               Experience India's most trusted Matka platform. Play Main Matka, Starline, and Gali Dishawar with the best market rates and instant withdrawals.
             </p>
 
-            <div className="flex flex-wrap gap-6 mb-12">
+            <div className="flex flex-col gap-8 mb-12">
               <motion.a
                 href="https://247mapp.site/khatri/apk/ratankhatri.apk"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-primary hover:bg-primary-dark text-white px-10 py-5 rounded-2xl font-black text-xl flex items-center justify-center gap-3 shadow-2xl shadow-primary/20 transition-all"
+                className="bg-primary hover:bg-primary-dark text-white px-10 py-5 rounded-2xl font-black text-xl flex items-center justify-center gap-3 shadow-2xl shadow-primary/20 transition-all border-b-4 border-primary-dark"
               >
                 <FaDownload /> DOWNLOAD APP
               </motion.a>
 
-              <div className="flex flex-col gap-3">
-                <a href="tel:7073767733" className="flex items-center gap-3 text-red-500 font-bold hover:scale-105 transition-transform">
-                  <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-xl">
+              <div className="grid grid-cols-1 gap-4">
+                <a href="tel:7073767733" className="flex items-center gap-4 p-4 glass rounded-2xl border border-primary/20 hover:bg-primary/5 transition-all">
+                  <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-xl text-red-500">
                     <FaHeadset />
                   </div>
-                  <span>CALL US AT: +91-7073767733</span>
+                  <div className="text-left">
+                    <p className="text-[10px] font-black text-text-muted uppercase tracking-widest leading-none mb-1">24/7 Support</p>
+                    <p className="font-bold text-text-main">+91-7073767733</p>
+                  </div>
                 </a>
-                <a href="https://wa.me/7073767733" className="flex items-center gap-3 text-green-500 font-bold hover:scale-105 transition-transform">
-                  <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-xl">
+                <a href="https://wa.me/7073767733" className="flex items-center gap-4 p-4 glass rounded-2xl border border-primary/20 hover:bg-primary/5 transition-all">
+                  <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-xl text-green-500">
                     <FaWhatsapp />
                   </div>
-                  <span>WHATSAPP SUPPORT</span>
+                  <div className="text-left">
+                    <p className="text-[10px] font-black text-text-muted uppercase tracking-widest leading-none mb-1">WhatsApp Chat</p>
+                    <p className="font-bold text-text-main">Get Help Instantly</p>
+                  </div>
                 </a>
               </div>
             </div>
@@ -176,19 +182,18 @@ const App = () => {
             initial={{ opacity: 0, scale: 0.8, x: 50 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 1 }}
-            className="relative flex justify-center lg:justify-end lg:-mt-[650px]"
+            className="relative flex -mt-90 justify-center lg:justify-end"
           >
             {/* Animated Glow Background */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/20 blur-[120px] rounded-full animate-pulse" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-primary/30 blur-[100px] rounded-full animate-pulse" />
 
             <div className="relative z-10">
               <motion.div
                 animate={{
-                  y: [0, -20, 0],
-                  rotate: [0, 5, 0]
+                  y: [0, -30, 0],
                 }}
                 transition={{
-                  duration: 6,
+                  duration: 4,
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
@@ -197,37 +202,34 @@ const App = () => {
                 <img
                   src={logo}
                   alt="Ratan Khatri Logo"
-                  className="w-72 h-72 md:w-[450px] md:h-[450px] rounded-full object-cover border-[16px] border-white/50 shadow-2xl backdrop-blur-sm"
+                  className="w-64 h-64 md:w-[380px] md:h-[380px] rounded-[4rem] object-cover border-[12px] border-white shadow-2xl backdrop-blur-sm transform rotate-3"
                 />
 
                 {/* Floating Badge */}
                 <motion.div
-                  animate={{ scale: [1, 1.1, 1] }}
+                  animate={{ scale: [1, 1.2, 1] }}
                   transition={{ duration: 2, repeat: Infinity }}
-                  className="absolute -top-4 -right-4 bg-green-500 text-white p-4 rounded-full shadow-xl border-4 border-white"
+                  className="absolute -top-6 -right-6 bg-green-500 text-white p-5 rounded-3xl shadow-2xl border-4 border-white transform -rotate-12"
                 >
-                  <FaCheckCircle className="text-3xl" />
+                  <FaCheckCircle className="text-4xl" />
                 </motion.div>
 
                 {/* Secure Badge */}
-                <div className="absolute -bottom-6 -left-6 glass p-4 rounded-2xl border border-primary/20 shadow-xl flex items-center gap-3">
-                  <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center text-primary">
+                <div className="absolute -bottom-10 -left-6 glass p-6 rounded-[2rem] border border-primary/30 shadow-2xl flex items-center gap-4">
+                  <div className="w-14 h-14 bg-primary/20 rounded-2xl flex items-center justify-center text-primary text-2xl">
                     <FaShieldAlt />
                   </div>
                   <div className="text-left">
-                    <p className="text-[10px] font-black text-text-muted uppercase tracking-tighter">Verified App</p>
-                    <p className="text-xs font-bold text-text-main">100% SECURE</p>
+                    <p className="text-[10px] font-black text-text-muted uppercase tracking-widest mb-1">Verified App</p>
+                    <p className="text-lg font-black text-text-main">100% SECURE</p>
                   </div>
                 </div>
               </motion.div>
-
-              {/* Decorative Blobs */}
-              <div className="absolute top-0 -left-10 w-24 h-24 bg-primary/10 blur-3xl rounded-full" />
-              <div className="absolute bottom-0 -right-10 w-32 h-32 bg-primary/20 blur-3xl rounded-full" />
             </div>
           </motion.div>
         </div>
       </section>
+
 
       {/* Stats Section */}
       <section className="py-12 px-6">
