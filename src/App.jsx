@@ -138,7 +138,7 @@ const App = () => {
 
             <div className="flex flex-col gap-8 mb-12">
               <motion.a
-                href="https://247mapp.site/khatri/apk/ratankhatri.apk"
+                href="/app-release.apk"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-primary hover:bg-primary-dark text-white px-10 py-5 rounded-2xl font-black text-xl flex items-center justify-center gap-3 shadow-2xl shadow-primary/20 transition-all border-b-4 border-primary-dark"
